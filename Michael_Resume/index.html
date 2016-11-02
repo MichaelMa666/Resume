@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id='main-container'>
+		<div id='myself'>
+			<img src="images/head.png"/>			
+			<span><b>马骁博</b></span>			
+		</div>
+		<div id='details'>
+			<ul id='ulbar' class='nav-tabs'>
+				<li><a href="javascript:void(0)" class="tablinks active" onclick="openContent(event, '1')">1</a></li>
+				<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')">2</a></li>
+				<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')">3</a></li>
+				<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')">4</a></li>
+			</ul>
+			<div id="1" class="tabcontent">1</div>
+			<div id="2" class="tabcontent">2</div>
+			<div id="3" class="tabcontent">3</div>
+			<div id="4" class="tabcontent">4</div>
+		</div>
+	</div>	
+	<script type="text/javascript">
+	/*
+	 * Tab Control
+	 */
+		function openContent(ev, col){
+
+			$('.tabcontent').css("display", "none");
+
+			$('.tablinks').removeClass("active");
+
+			document.getElementById(col).style.display = "block";
+			
+			$('#'+col).css("display", "block");
+		
+			ev.currentTarget.className += "active";
+		}
+	</script>
+</body>
+</html>

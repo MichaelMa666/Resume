@@ -6,7 +6,6 @@ body {
   /*background-color: rgb(60, 60, 60);*/
   background-color:#f5f4ef;
 }
-
 #main-container {
 	width: 600px;
 	margin: 30px auto;
@@ -44,10 +43,9 @@ body {
 	background-color: rgb(5, 189, 191);
 	text-align: center;
 }
-#vernier {
-	width:;
-}
+
 #ulbar {
+	position: relative;
 	width: 450;
 	height: 80px;
 	margin: 0 auto;
@@ -57,44 +55,57 @@ body {
 	list-style-type: none;
 	border:1px solid #ccc;
 }
-
+#vernier {
+	position: absolute;
+	width: 80px;
+	height: 90px;
+	bottom: 0;
+	left: 65.16249084472656px;
+	opacity: 0.56;
+	background-color: #ddd;
+	transition: 0.5s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
+}
 #ulbar li {
 	margin-right: -4px;
 	display: inline-block;
 	width: 80px;
 	height: 70px;
-	border-left: 1.3px solid #fff;
-	color: rgb(189, 192, 201);
+	border-left: 1.2px solid #fff;
 }
-
+i{
+	line-height: 180%;
+}
 #ulbar li:last-child {
-	border-right: 1.3px solid #fff;
+	border-right: 1.2px solid #fff;
 }
 
 #ulbar li a {
-	color: tomato;
+	color: rgb(189, 192, 201);
 	width: 100%;
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	transition: 0.3s;
+	transition: 0.5s;
 	border-left: 1px solid #e0e0e0;
 	height: 70px;
-}	
-
+}
+#ulbar li a span {
+	display: block;
+}
 #ulbar li:last-child a{
 	border-right: 1px solid #e0e0e0;
 	height: 70px;
 }
-#ulbar li :hover {
-	background-color: #ddd;
-	padding-top: -10px;
+#ulbar li i:hover{
 
+}
+#ulbar li a span:hover{
+	
 }
 
 #ulbar li :focus, .active {
-	background-color: #ccc;
-
+	color: rgb(8, 210, 212);
 }
 .tabcontent {
 	display: none;
@@ -115,7 +126,3 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-/*.tablinks:link{
-	color: rgb(189, 192, 201);
-	color: tomato;
-}*/

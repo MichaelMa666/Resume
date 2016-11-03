@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 <head>
 	<title></title>
 </head>
@@ -13,12 +15,18 @@
 			<span><b>马骁博</b></span>			
 		</div>
 		<div id='details'>
-			<ul id='ulbar' class='nav-tabs'>
-				<li><a href="javascript:void(0)" class="tablinks active" onclick="openContent(event, '1')">1</a></li>
-				<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')">2</a></li>
-				<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')">3</a></li>
-				<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')">4</a></li>
+			
+			
+			<ul id='ulbar'>
+				
+					<div id="vernier"></div>
+					<li><a href="javascript:void(0)" class="tablinks active" onclick="openContent(event, '1')"><i class="icon-home icon-2x"></i><span>home</span></a></li>
+					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')"><i class="icon-list-alt icon-2x"></i><span>resume</span></a></li>
+					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')"><i class="icon-tasks icon-2x"></i><span>services</span></a></li>
+					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')"><i class="icon-envelope icon-2x"></i><span>contact</span></a></li>
+				
 			</ul>
+
 			<div id="1" class="tabcontent">1</div>
 			<div id="2" class="tabcontent">2</div>
 			<div id="3" class="tabcontent">3</div>
@@ -35,12 +43,23 @@
 
 			$('.tablinks').removeClass("active");
 
-			document.getElementById(col).style.display = "block";
-			
 			$('#'+col).css("display", "block");
 		
-			ev.currentTarget.className += "active";
+			ev.currentTarget.className += " active";
+			
+			divSilde(col);
 		}
+
+	/*
+	 * Tab Control slide
+	 */
+	 	function divSilde(col){
+
+	 		var mg_left = $('li').first().offset().left - $('#ulbar').position().left
+	 		
+	 		console.log(mg_left);
+	 		$('#vernier').css("left", (col - 1) * (80 + 1.2) + mg_left);
+	 	}
 	</script>
 </body>
 </html>

@@ -2,7 +2,8 @@
 <html>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>	
+	<script type="text/javascript" src="js/fastclick.js" ></script>	
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 <head>
@@ -20,7 +21,7 @@
 			<ul id='ulbar'>
 				
 					<div id="vernier"></div>
-					<li><a href="javascript:void(0)" class="tablinks active" onclick="openContent(event, '1')"><i class="icon-home icon-2x"></i><span>home</span></a></li>
+					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '1')"><i class="icon-home icon-2x"></i><span>home</span></a></li>
 					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')"><i class="icon-list-alt icon-2x"></i><span>resume</span></a></li>
 					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')"><i class="icon-tasks icon-2x"></i><span>services</span></a></li>
 					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')"><i class="icon-envelope icon-2x"></i><span>contact</span></a></li>
@@ -43,10 +44,11 @@
 
 			$('.tablinks').removeClass("active");
 
-			$('#'+col).css("display", "block");
-		
-			ev.currentTarget.className += " active";
-			
+			// document.getElementById(col).style.display = "block";
+    		$('#' + col).css("display", "block")
+
+    		ev.currentTarget.className += " active";
+
 			divSilde(col);
 		}
 
@@ -60,6 +62,11 @@
 	 		console.log(mg_left);
 	 		$('#vernier').css("left", (col - 1) * (80 + 1.2) + mg_left);
 	 	}
+	</script>
+	<script type="text/javascript">
+		$(function() {
+		    FastClick.attach(document.body);
+		});
 	</script>
 </body>
 </html>

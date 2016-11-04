@@ -104,7 +104,7 @@ i{
 	
 }
 
-#ulbar li :focus, .active {
+#ulbar li a.active {
 	color: rgb(8, 210, 212);
 }
 .tabcontent {

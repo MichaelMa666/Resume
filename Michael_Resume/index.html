@@ -5,39 +5,100 @@
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>	
 	<script type="text/javascript" src="js/fastclick.js" ></script>	
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font/css/font-awesome.min.css">
 <head>
 	<title></title>
 </head>
 <body ontouchstart="">
 	<div id='main-container'>
 		<div id='myself'>
-			<img src="images/head.png"/>			
-			<span><b>马骁博</b></span>			
+			<img src="images/head.png"/>	
+			<div id="sef_info">
+				<h1 align="center">马骁博<br>Michael Ma</h1><br>
+				<b>web developer</b><br>
+				<b>web service engineer</b><br>
+				<b>basketball fan</b><br>
+				<b>an optimistic guy</b>
+				<br>
+			</div>
+			<div id="socials">
+				<ul>
+					<li><i></i></li>
+					<li><i></i></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="icon-github icon-large"></a></i></li>
+					<li><i></i></li>
+				</ul>
+			</div>
+			<div id="rights">Michael Ma 2016. All rights reserved</div>	
 		</div>
 		<div id='details'>
-			
-			
-			<ul id='ulbar'>
-				
-					<div id="vernier"></div>
-					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '1')"><i class="icon-home icon-2x"></i><span>home</span></a></li>
-					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')"><i class="icon-list-alt icon-2x"></i><span>resume</span></a></li>
-					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')"><i class="icon-tasks icon-2x"></i><span>services</span></a></li>
-					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')"><i class="icon-envelope icon-2x"></i><span>contact</span></a></li>
-				
-			</ul>
-
-			<div id="1" class="tabcontent">1</div>
-			<div id="2" class="tabcontent">2</div>
-			<div id="3" class="tabcontent">3</div>
-			<div id="4" class="tabcontent">4</div>
+			<ul id='ulbar'>			
+				<div id="vernier"></div>
+				<li id="test">
+					<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '1')" id="defaultOpen">
+						<i class="fa fa-home fa-3x"></i><br>
+						<span>home</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')">
+						<!-- <i class="fa fa-user-circle-o fa-3x"></i><br><span>resume</span></a> -->
+						<i class="fa fa-file-text fa-3x"></i><br><span>resume</span></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')">
+							<i class="fa fa-tasks fa-3x"></i><br>
+							<span>services</span>
+						</a>
+					</li>
+					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')"><i class="fa fa-envelope-open fa-3x"></i><br><span>contact</span></a></li>
+				</ul>
+			<div id="1" class="tabcontent">
+				<div class="content-title"><h2>HOME.</h2></div>
+				<div class="character">
+					<h2>REALISTIC.</h2>
+					<h2>INNOVATIVE.</h2>
+					<h2>DETERMINED.</h2>
+					<p>1111111111111111111111111111111111111111111111111111111111</p>
+					<p>222222222222222222222222222222222222222222222222222222222222222222222222222222222222</p>
+				</div>
+					<img src="images/head.png"/>
+			</div>
+			<div id="2" class="tabcontent">
+				<div class="content-title"><h2>RESUME.<span>UP-TO-DATE</span></h2></div>
+				<button class="accordion">Experience</button>
+				<div class="panel">
+					<p>...</p>
+				</div>
+				<button class="accordion">Education</button>
+				<div class="panel">
+					<p>...</p>
+				</div>
+				<button class="accordion">Skill</button>
+				<div class="panel">
+					<p>...</p>
+				</div>
+			</div>
+			<div id="3" class="tabcontent">
+				<div class="content-title"><h2>SERVICE.<span>WHAT-I-CAN-DO</span></h2></div>
+			</div>
+			<div id="4" class="tabcontent">
+					<div class="content-title"><h2>CONTACT.<span>WANNA-TALK-TO-ME?</span></h2></div>
+					<div id="map">My map will go here</div>
+				<div id="connect-tab">	
+					<li class=""><i class="fa fa-envelope fa-lg cricle-bkg"></i><span>maxiaobo2015@163.com</span></li>
+					<li class=""><i class="fa fa-phone fa-lg cricle-bkg"></i><span>130-7209-6057</span></li>
+					<li class=""><i class="fa fa-location-arrow fa-lg cricle-bkg"></i><span>TianJin City DongLi Area</span></li>
+				</div>
+			</div>
 		</div>
 	</div>	
 	<script type="text/javascript">
-	/*
-	 * Tab Control
-	 */
+	/***********************************************************************
+	 * 
+	 *Tab Control
+	 *
+	 ***********************************************************************/
 		function openContent(ev, col){
 
 			$('.tabcontent').css("display", "none");
@@ -51,22 +112,54 @@
 
 			divSilde(col);
 		}
+		
+		// document.getElementById('defaultOpen').click();
+		$('#defaultOpen')[0].click();
 
-	/*
+	/************************************************************************
+	 * 
 	 * Tab Control slide
-	 */
+	 *
+	 ************************************************************************/
 	 	function divSilde(col){
 
-	 		var mg_left = $('li').first().offset().left - $('#ulbar').position().left
+	 		var mg_left = $('#ulbar li').first().offset().left - $('#ulbar').offset().left;
 	 		
 	 		console.log(mg_left);
-	 		$('#vernier').css("left", (col - 1) * (80 + 1.2) + mg_left);
+
+	 		$('#vernier').css("left", (col - 1) * 101 + mg_left);
 	 	}
 	</script>
 	<script type="text/javascript">
-		$(function() {
-		    FastClick.attach(document.body);
-		});
+	/***********************************************************************************************************************
+	 *
+	 * Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons.
+	 * The  "active" class is used to add a background color to the current button when its belonging panel is open. The "show"  
+	 * class is used to open the specific accordion panel 
+	 *
+	 ***********************************************************************************************************************/
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		    acc[i].onclick = function(){
+		        this.classList.toggle("active");
+		        this.nextElementSibling.classList.toggle("show");
+		    }
+		}
+	/**********************************************************************************************************
+	 *
+ 	 * Display the map
+ 	 *
+	 **********************************************************************************************************/ 
+		function myMap() {
+			var mapCanvas = document.getElementById("map");
+			var mapOptions = {
+			    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+			};
+		    var map = new google.maps.Map(mapCanvas, mapOptions);
+		}
 	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 </html>

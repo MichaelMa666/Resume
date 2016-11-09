@@ -12,6 +12,12 @@ a {
 ul {
 	list-style-type: none;
 }
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}
+
 #main-container {
 	width: 800px;
 	margin: 30px auto;

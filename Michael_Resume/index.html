@@ -14,7 +14,7 @@
 		<div id='myself'>
 			<img src="images/head.png"/>	
 			<div id="sef_info">
-				<h1 align="center">马骁博<br>Michael Ma</h1><br>
+				<h1>马骁博<br>Michael Ma</h1><br>
 				<b>web developer</b><br>
 				<b>web service engineer</b><br>
 				<b>basketball fan</b><br>
@@ -23,10 +23,10 @@
 			</div>
 			<div id="socials">
 				<ul>
-					<li><i></i></li>
-					<li><i></i></li>
-					<li><a href="http://github.com/MichaelMa666"><i class="icon-github icon-large"></a></i></li>
-					<li><i></i></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-weibo"></i></a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-qq"></i></a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-github-alt"></i></a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-weixin"></i></a></li>
 				</ul>
 			</div>
 			<div id="rights">Michael Ma 2016. All rights reserved</div>	
@@ -66,17 +66,64 @@
 			</div>
 			<div id="2" class="tabcontent">
 				<div class="content-title"><h2>RESUME.<span>UP-TO-DATE</span></h2></div>
-				<button class="accordion">Experience</button>
+				<button class="accordion"><i class="fa fa-suitcase"></i>Experience<i class="fa fa-toggle-up"></i></button>
 				<div class="panel">
 					<p>...</p>
 				</div>
-				<button class="accordion">Education</button>
+				<button class="accordion"><i class="fa fa-graduation-cap"></i>Education<i class="fa fa-toggle-up"></i></button>
 				<div class="panel">
 					<p>...</p>
 				</div>
-				<button class="accordion">Skill</button>
+				<button class="accordion" id="EDbtn"><i class="fa fa-cubes"></i>Skill<i class="fa fa-toggle-up"></i></button>
 				<div class="panel">
-					<p>...</p>
+					
+					<div class="object-bar">
+						<div class="progress-title">JavaScript</div>
+						<div class="progress-wrap">
+							<div class="progress-wraper">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="label">90%</div>
+						</div>
+					</div>
+
+					<div class="object-bar">
+						<div class="progress-title">HTML5</div>
+						<div class="progress-wrap">
+							<div class="progress-wraper">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="label">85%</div>
+						</div>
+					</div>
+					
+					<div class="object-bar">
+						<div class="progress-title">CSS3</div>
+						<div class="progress-wrap">
+							<div class="progress-wraper">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="label">80%</div>
+						</div>
+					</div>
+					<div class="object-bar">
+						<div class="progress-title">Node.js</div>
+						<div class="progress-wrap">
+							<div class="progress-wraper">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="label">70%</div>
+						</div>
+					</div>
+					<div class="object-bar">
+						<div class="progress-title">Redis</div>
+						<div class="progress-wrap">
+							<div class="progress-wraper">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="label">55%</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="3" class="tabcontent">
@@ -144,6 +191,9 @@
 		for (i = 0; i < acc.length; i++) {
 		    acc[i].onclick = function(){
 		        this.classList.toggle("active");
+		        // console.log(this.children[1]);
+		        this.children[1].classList.toggle("fa-toggle-down");
+		        this.children[1].classList.toggle("fa-toggle-up");
 		        this.nextElementSibling.classList.toggle("show");
 		    }
 		}
@@ -159,6 +209,46 @@
 			};
 		    var map = new google.maps.Map(mapCanvas, mapOptions);
 		}
+	</script>
+	<script type="text/javascript">
+		$('#EDbtn').click(function(){
+			
+			// var elem = document.getElementById("mybar");
+			//   var width = 1;
+			//   var id = setInterval(frame, 10);
+			//   console.log($('.myProgress').css('width'));
+			//   var per = parseFloat($('.label')[0].innerHTML)/100;
+			//   var wd = parseInt($('.myProgress').css('width').slice(0, -2));
+			//   console.log(per);
+			//   var tag =  wd * per;
+			//   console.log(tag);
+			//   function frame() {
+			//     if (width >= 100) {
+			//       clearInterval(id);
+			//     } else {
+			//       width++;
+			//       elem.style.width = width + 'px';
+			//     }
+			// }
+
+			// for(var i=0; i < $('.label').length; i ++){
+			// 	console.log($('.label')[i].innerHTML);
+			// 	var tag = $('.label')[i].innerHTML;
+			// 	var width = 10;
+			// 	// console.log($('.progressbar').css("width",width * 1 + '%'));
+			//     var id = setInterval(frame, 10);
+			//     function frame() {
+			//         if (width >= tag) {
+			//             clearInterval(id);
+			//         } else {
+			//             width++; 
+			//             $('.progressbar').css("width",width + '%')
+			//             $('.label')[i].innerHTML = width * 1 + '%';
+			//         }
+			//     }
+		 //    }
+		    
+		});    		
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>

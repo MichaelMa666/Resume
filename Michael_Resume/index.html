@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>	
 	<script type="text/javascript" src="js/fastclick.js" ></script>	
+	<script type="text/javascript" src="js/circle-progress.js" ></script>		
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/font/css/font-awesome.min.css">
 <head>
@@ -76,59 +77,124 @@
 				</div>
 				<button class="accordion" id="EDbtn"><i class="fa fa-cubes"></i>Skill<i class="fa fa-toggle-up"></i></button>
 				<div class="panel">
-					<p>Technical</p>
-					<div class="object-bar">
-						<div class="progress-title">JavaScript</div>
-						<div class="progress-wrap">
-							<div class="progress-wraper">
-								<div class="progress-bar" id="bar-0"></div>
+					<div class="sub-panel">
+						<p>Technical</p>
+						<div class="object-bar">
+							<div class="progress-title">JavaScript</div>
+							<div class="progress-wrap">
+								<div class="progress-wraper">
+									<div class="progress-bar" id="bar-0"></div>
+								</div>
+								<div class="label" id="lab-0">80%</div>
 							</div>
-							<div class="label" id="lab-0">80%</div>
 						</div>
-					</div>
 
-					<div class="object-bar">
-						<div class="progress-title">HTML5</div>
-						<div class="progress-wrap">
-							<div class="progress-wraper">
-								<div class="progress-bar" id="bar-1"></div>
+						<div class="object-bar">
+							<div class="progress-title">HTML5</div>
+							<div class="progress-wrap">
+								<div class="progress-wraper">
+									<div class="progress-bar" id="bar-1"></div>
+								</div>
+								<div class="label" id="lab-1">75%</div>
 							</div>
-							<div class="label" id="lab-1">75%</div>
+						</div>
+						
+						<div class="object-bar">
+							<div class="progress-title">CSS3</div>
+							<div class="progress-wrap">
+								<div class="progress-wraper">
+									<div class="progress-bar" id="bar-2"></div>
+								</div>
+								<div class="label" id="lab-2">70%</div>
+							</div>
+						</div>
+						<div class="object-bar">
+							<div class="progress-title">Node.js</div>
+							<div class="progress-wrap">
+								<div class="progress-wraper">
+									<div class="progress-bar" id="bar-3"></div>
+								</div>
+								<div class="label" id="lab-3">70%</div>
+							</div>
+						</div>
+						<div class="object-bar">
+							<div class="progress-title">Redis</div>
+							<div class="progress-wrap">
+								<div class="progress-wraper">
+									<div class="progress-bar" id="bar-4"></div>
+								</div>
+								<div class="label" id="lab-4">55%</div>
+							</div>
 						</div>
 					</div>
 					
-					<div class="object-bar">
-						<div class="progress-title">CSS3</div>
-						<div class="progress-wrap">
-							<div class="progress-wraper">
-								<div class="progress-bar" id="bar-2"></div>
+					<div class="sub-panel">
+						<p>SoftWare&Environment</p>
+						<div class="circle-wrapper">
+							<div class ="circle-progress">
+								<strong>80<i>%</i></strong>
 							</div>
-							<div class="label" id="lab-2">70%</div>
+							<span>Linux</span>
 						</div>
-					</div>
-					<div class="object-bar">
-						<div class="progress-title">Node.js</div>
-						<div class="progress-wrap">
-							<div class="progress-wraper">
-								<div class="progress-bar" id="bar-3"></div>
+						
+						<div class="circle-wrapper">
+							<div class ="circle-progress">
+								<strong>70<i>%</i></strong>
 							</div>
-							<div class="label" id="lab-3">70%</div>
+							<span>Chrome</span>
 						</div>
-					</div>
-					<div class="object-bar">
-						<div class="progress-title">Redis</div>
-						<div class="progress-wrap">
-							<div class="progress-wraper">
-								<div class="progress-bar" id="bar-4"></div>
-							</div>
-							<div class="label" id="lab-4">55%</div>
-						</div>
-					</div>
-					
-					<hr>
 
-					<p>SoftWare&Environment</p>
+						<div class="circle-wrapper">
+							<div class ="circle-progress">
+								<strong>60<i>%</i></strong>
+							</div>
+							<span>PowerPoint</span>
+						</div>
+						
+						<div class="circle-wrapper">
+							<div class ="circle-progress">
+								<strong>50<i>%</i></strong>
+							</div>
+							<span>Eclipse</span>
+						</div>
+					</div>
 					
+					<div class="sub-panel">
+						<p>Language</p>
+						<div class="lang-kind">Chinese</div>
+						<div class="lang-star">
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+						</div>
+						<div class="lang-prop">Native</div>
+						<div class="lang-kind">English</div>
+						<div class="lang-star">
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg"></i>
+							<i class="fa fa-star fa-lg empty"></i>
+							<i class="fa fa-star fa-lg empty"></i>
+						</div>
+						<div class="lang-prop">Fluent</div>
+					</div>
+					<div class="sub-panel">
+						<p>Additionally</p>
+						<li><i class="fa fa-check-circle"></i>knowledge of ...</li>
+						<li><i class="fa fa-check-circle"></i>knowledge of ...</li>
+						<li><i class="fa fa-check-circle"></i>knowledge of ...</li>
+						<li><i class="fa fa-check-circle"></i>knowledge of ...</li>
+						<li><i class="fa fa-check-circle"></i>knowledge of ...</li>
+						<li><i class="fa fa-check-circle"></i>knowledge of ...</li>
+					</div>
 				</div>
 			</div>
 			<div id="3" class="tabcontent">
@@ -217,7 +283,7 @@
 	</script>
 	<script type="text/javascript">
 		$('#EDbtn').one("click", function(){
-			timer = 3000 ;
+			timer = 3000;
 			var arrSkill = new Array;
 			var arrWidth = new Array;
 			var items = $('.label').length;
@@ -229,7 +295,6 @@
 			for(var i = 0; i < items; i ++){
 				arrWidth.push(wd * arrSkill[i]/100);
 			}
-			console.log(arrWidth);
 
 			for(var i = 0; i < items; i ++){
 				
@@ -244,7 +309,49 @@
 				    }, timer/arrSkill[i]);
 				})(i);
 			}
+/************************************************************************************************
+ *
+ * Circle process bar operate each element of class="circle-progress"
+ *
+ ************************************************************************************************/
+			/*$('.circle-progress').circleProgress({
+		        value: 0.7,
+		        size: 80,
+		        fill: {
+		            gradient: ["#00bdbd"]
+		        },
+		        animation:{
+		        	duration:3000
+		        },
+		        lineCap: 'round'
+		    }).on('circle-animation-progress', function(event, progress) {
+		    
+		    		console.log(progress);
+  					$(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>')
+  				
+  			});*/
+  			$('.circle-progress').each(function(){
+  				var val = parseInt($(this).find('strong').text().slice(0, -1));
+  				console.log(val);
+  				$(this).circleProgress({
+			        value: val/100,
+			        size: 80,
+			        startAngle: -Math.PI/2,
+			        fill: {
+			            gradient: ["#00d4d4"]
+			        },
+			        animation:{
+			        	duration:3000
+			        },
+			        lineCap: 'round'
+			    }).on('circle-animation-progress', function(event, progress) {
+	  					$(this).find('strong').html(parseInt(val * progress) + '<i>%</i>')
+	  			});
+  			});
 		});
+	</script>
+	<script type="text/javascript">
+		
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>

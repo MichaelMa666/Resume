@@ -12,7 +12,9 @@ a {
 ul {
 	list-style-type: none;
 }
-
+.hidden{
+       display:none;
+    }
 /*Important: for Safari*/
 @media screen and (max-device-width: 480px){
   body{
@@ -210,7 +212,7 @@ ul {
 #acc {
 	width: 550px;
 	height: 500px;
-	overflow: auto;
+	overflow-y:auto;
 }
 #acc::-webkit-scrollbar{
 	width:2px;
@@ -237,13 +239,13 @@ ul {
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
     background-color: #e9e9e9;
-    font-size: medium;
+ /*   font-size: small;*/
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
     color: #abaeba;
     cursor: pointer;
-    padding: 20px 20px 20px 20px;
-    margin: 0;
+    padding: 12px 30px 6px 30px;
+    margin: 0; 
     width: 100%;
     text-align: left;
     border-right:none;
@@ -257,38 +259,79 @@ button.accordion.active, button.accordion:hover {
     background-color: #ddd;
 }
 
+.accordion span.ui-icon {
+    float: right;
+    height: 20px;
+    line-height: 16px;
+}
 /* Style the accordion panel. Note: hidden by default */
 div.panel {
-	margin: 0;
+	margin: 0px;
     background-color: white;
 }
 /*div.panel.show {
 	display: block;
 }*/
-.sub-panel {
+.right-icon {
+	float: right;
+}
+.exp-sub-panel, .edu-sub-panel, .ach-sub-panel, .skill-sub-panel{
 	display: block;
-	padding: 20px 40px;
+	padding: 30px 40px;
 	border-bottom: 1px solid #eee;
+	height: auto;
 }
 
-.sub-panel:nth-child(1){
+.skill-sub-panel:nth-child(1){
 	height: 250px;
 }
-.sub-panel:nth-child(2){
+.skill-sub-panel:nth-child(2){
 	height: 180px;
 }
-.sub-panel:nth-child(3){
+.skill-sub-panel:nth-child(3){
 	height: 200px;
 }
-.sub-panel:nth-child(4){
+.skill-sub-panel:nth-child(4){
 	height: 100px;
 }
-/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-div.panel.show {
+.exp-1, .edu-1{
+	position: relative;
+	height: 160px;
+}
+.exp-1-info , .edu-1-info{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+.exp-1-info span, .edu-1-info span, .ach-1-content span{
+	display: block;
+}
+.exp-1-info img {
+	border:0px;
+	display: block;
+	position: absolute;
+	width: 80px;
+	height: 25px;
+}
 
-    opacity: 1;
-    max-height: 3350px;
-    transition: 0.6s ease-in-out;
+.edu-1-info img {
+	border:0px;
+	display: block;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+}
+.exp-1-content, .edu-1-content{
+	float: right;
+	width: 300px;
+	height: 150px;
+}
+.exp-1-content hr, .edu-1-content hr{
+	border: 2px solid #00d4d4;
+	border-radius: 3px;
+	width: 50px;
+	margin-left: 0;
 }
 .panel p {
 	font-weight: bold;
@@ -431,13 +474,73 @@ strong {
 	color: #cdcdcd;
 }
 
-.sub-panel li{
+.skill-sub-panel li, .duty li{
 	list-style-type: none;
 	width: 200px;
 	line-height: 20px;
 	float: left;
 }
-.sub-panel li i{
+.skill-sub-panel li i, .duty li i{
 	color: #00d4d4;
 	padding-right: 10px;
 }
+.ach-1-content {
+	width:230px;
+	height: 120px;
+	float: left;
+}
+.ach-1-content span {
+	line-height: 84px;
+}
+.circle-icon {
+	float: left;
+	width: 84px;
+	height: 84px;
+	border: 2px dashed #00d4d4;
+	text-align: center;
+	border-radius: 100%;
+}
+.circle-icon i {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #00d4d4;
+}
+.ui-button {
+	margin-top: 5px;
+	display: block;
+	padding: 6px 12px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background-color: #00d4d4;
+	color: #fff;
+}
+#video-demo, #video-project{
+	background-color: tomato;
+	width: 470px;
+	height: 360px;
+	border-radius: 10px;
+}
+video {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	margin: auto;
+}
+

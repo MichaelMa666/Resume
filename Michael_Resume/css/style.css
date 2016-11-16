@@ -243,6 +243,7 @@ button.accordion {
     color: #abaeba;
     cursor: pointer;
     padding: 20px 20px 20px 20px;
+    margin: 0;
     width: 100%;
     text-align: left;
     border-right:none;

@@ -9,6 +9,9 @@ body {
 a {
 	text-decoration: none;
 }
+h4 {
+	margin: 5px 0px;
+}
 ul {
 	list-style-type: none;
 }
@@ -354,7 +357,6 @@ div.panel {
 #map {
 	width:550px;
 	height:300px;
-	background-color:tomato;
 }
 .cricle-bkg {
 	background-color: #00d4d4;
@@ -530,10 +532,16 @@ strong {
 	background-color: #00d4d4;
 	color: #fff;
 }
-#video-demo, #video-project{
+#video-demo{
 	background-color: tomato;
 	width: 470px;
 	height: 360px;
+	border-radius: 10px;
+}
+#video-project {
+	background-color: tomato;
+	width: 470px;
+	height: 295px;
 	border-radius: 10px;
 }
 video {
@@ -543,4 +551,67 @@ video {
 	display: block;
 	margin: auto;
 }
-
+.ser-wrapper {
+	height: 500px;
+	width: 550px;
+	overflow-y: scroll; 
+}
+.ser-wrapper::-webkit-scrollbar{
+	width:2px;
+	border-radius:2px;
+	background-color:#eee;
+	/*rgb(85, 92, 111)*/
+}
+.ser-wrapper::-webkit-scrollbar-thumb{
+	height: 300px;
+	width: 2px;
+	background-color:#555c70;
+	border-radius:2px;
+}
+.white-content, .grey-content {
+	display: block;
+	padding: 30px 50px;
+	height: 160px;
+}
+.white-content {
+	background-color: #fff;
+}
+.grey-content {
+	background-color: #f7f8fa;
+}
+.ser-logo {
+	border: 1px solid #00d4d4;
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+.ser-logo i {
+	color: #00d4d4;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.ser-content {
+	position: relative;
+	width: 300px;
+	margin-right: 0px;
+	padding: 0px;
+}
+.ser-content p{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+	width: auto;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}

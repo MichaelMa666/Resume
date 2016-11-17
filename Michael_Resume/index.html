@@ -232,7 +232,7 @@
 								<i class="fa fa-star fa-lg"></i>
 								<i class="fa fa-star fa-lg empty"></i>
 								<i class="fa fa-star fa-lg empty"></i>
-							</div>
+							</div> 
 							<div class="lang-prop">Fluent</div>
 						</div>
 						<div class="skill-sub-panel">
@@ -269,9 +269,8 @@
 									</div>
 									<button class="ui-button" id="open-2">Project</button>
 									<div id="video-project" class="hidden">
-										<video width="460" height="345" controls>
+										<video width="460" height="280" controls>
 										  <source src="material/SCAN_DB_UI.mp4" type="video/mp4">
-										  <p>Your browser does not support HTML5 audio.</p>
 										</video>
 									</div>
 								</div>
@@ -283,6 +282,45 @@
 			</div>
 			<div id="3" class="tabcontent">
 				<div class="content-title"><h2>SERVICE.<span>WHAT-I-CAN-DO</span></h2></div>
+				<div class="ser-wrapper">
+					<div class="white-content">
+						<div class="ser-logo fl">
+							<i class="fa fa-html5 fa-2x"></i>
+						</div>
+						<div class="ser-content fr">
+							<h4>Front-End Development</h4>
+							<p>I integrate your HTML and CSS templates into some of the most popular open source CMSs available (Wordpress, Yii, CakePHP, etc.) or develop a custom solution for your personal needs.</p>
+						</div>
+					</div>
+					<div class="grey-content">
+						<div class="ser-logo fr">
+							<i class="fa fa-gears fa-2x"></i>
+						</div>
+						<div class="ser-content fl">
+							<h4>Back-End Development</h4>
+							<p>2222222222222222222222222222222222222222222222</p>
+						</div>
+					</div>
+					<div class="white-content">
+						<div class="ser-logo fl">
+							<i class="fa fa-pencil fa-2x"></i>
+						</div>
+						<div class="ser-content fr">
+							<h4>Web Design</h4>
+							<p>2222222222222222222222222222222222222222222222</p>
+						</div>
+					</div>
+					<div class="grey-content">
+						<div class="ser-logo fr">
+							<i class="fa fa-edit fa-2x"></i>
+						</div>
+						<div class="ser-content fl">
+							<h4>PPT Design</h4>
+							<p>2222222222222222222222222222222222222222222222</p>
+						</div>
+						
+					</div>
+				</div>
 			</div>
 			<div id="4" class="tabcontent">
 					<div class="content-title"><h2>CONTACT.<span>WANNA-TALK-TO-ME?</span></h2></div>
@@ -371,13 +409,14 @@
  	 * Display the map
  	 *
 	 **********************************************************************************************************/ 
-		function myMap() {
-			var mapCanvas = document.getElementById("map");
-			var mapOptions = {
-			    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+	/*	function myMap() {
+		    var mapOptions1 = {
+			    center: new google.maps.LatLng(39.3, 117.30),
+			    zoom:9,
+			    mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
-		    var map = new google.maps.Map(mapCanvas, mapOptions);
-		}
+			var map1 = new google.maps.Map(document.getElementById("map"),mapOptions1);
+		}*/
 	</script>
 	<script type="text/javascript">
 		$('#EDbtn').one("click", function(){
@@ -457,6 +496,6 @@
 		  $("#video-project").toggle( "slow" );
 		});
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+	<script src=""></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 
 		
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-	<link rel="stylesheet" href="css/font/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font/css/font-awesome.css">
 <head>
 	<title></title>
 </head>
@@ -19,11 +19,11 @@
 			<img src="images/head.png"/>	
 			<div id="sef_info">
 				<h1>马骁博<br>Michael Ma</h1><br>
-				<b>web developer</b><br>
-				<b>web service engineer</b><br>
-				<b>basketball fan</b><br>
-				<b>an optimistic guy</b>
-				<br>
+				<span>web developer</span>
+				<span>web service engineer</span>
+				<span>basketball fan</span>
+				<span>an optimistic guy</span>
+				
 			</div>
 			<div id="socials">
 				<ul>
@@ -257,7 +257,7 @@
 								</div>
 								<div class="ach-1-content">
 									<div class="circle-icon"><i class="fa fa-server fa-2x"></i></div>
-									<span>&nbsp;1 stable server</span>
+									<span>&nbsp;2 stable server</span>
 								</div>
 								
 								<div class="ach-1-video">
@@ -324,12 +324,28 @@
 			</div>
 			<div id="4" class="tabcontent">
 					<div class="content-title"><h2>CONTACT.<span>WANNA-TALK-TO-ME?</span></h2></div>
-					<div id="map">My map will go here</div>
-				<div id="connect-tab">	
-					<li class=""><i class="fa fa-envelope fa-lg cricle-bkg"></i><span>maxiaobo2015@163.com</span></li>
-					<li class=""><i class="fa fa-phone fa-lg cricle-bkg"></i><span>130-7209-6057</span></li>
-					<li class=""><i class="fa fa-location-arrow fa-lg cricle-bkg"></i><span>TianJin City DongLi Area</span></li>
-				</div>
+					<div class="con-wrapper">
+						<div id="map">My map will go here</div>
+						<div id="connect-tab">
+							<div class="con-frame">
+								<div class="con-name">
+									<input type="text" name="name" placeholder="NAME">
+								</div>
+								<div class="con-mail">
+									<input type="text" name="email" placeholder="EMAIL">
+								</div>
+								<div class="con-message">
+									<textarea placeholder="MESSAGE"></textarea>
+								</div>
+								<button type="submit" class="btn-send">Send message</button>
+							</div>
+							<div class="con-way">
+								<li class=""><i class="fa fa-envelope fa-lg cricle-bkg"></i><span>maxiaobo2015@163.com</span></li>
+								<li class=""><i class="fa fa-phone fa-lg cricle-bkg"></i><span>130-7209-6057</span></li>
+								<li class=""><i class="fa fa-location-arrow fa-lg cricle-bkg"></i><span>TianJin City DongLi Area</span></li>
+							</div>
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>	
@@ -496,6 +512,16 @@
 		  $("#video-project").toggle( "slow" );
 		});
 	</script>
-	<script src=""></script>
+	<script type="text/javascript">
+		function myMap() {
+		    var mapOptions = {
+		        center: new google.maps.LatLng(51.5, -0.12),
+		        zoom: 10,
+		        mapTypeId: google.maps.MapTypeId.HYBRID
+		    }
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 </html>

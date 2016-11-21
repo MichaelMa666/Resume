@@ -63,8 +63,8 @@
 					<h2>REALISTIC.</h2>
 					<h2>INNOVATIVE.</h2>
 					<h2>DETERMINED.</h2>
-					<p>1111111111111111111111111111111111111111111111111111111111</p>
-					<p>222222222222222222222222222222222222222222222222222222222222222222222222222222222222</p>
+					<p>I'm a new web developer based in TianJin city of China. I have been in bussiness about one and a half year and major in web development.</p>
+					<p>I devoted myself to front-end web before and I will hold on this path.</p>
 				</div>
 					<img src="images/head.png"/>
 			</div>
@@ -204,7 +204,7 @@
 								<div class ="circle-progress">
 									<strong>50<i>%</i></strong>
 								</div>
-								<span>Eclipse</span>
+								<span>SVN</span>
 							</div>
 						</div>
 						
@@ -329,15 +329,21 @@
 						<div id="connect-tab">
 							<div class="con-frame">
 								<div class="con-name">
-									<input type="text" name="name" placeholder="NAME">
+									<input type="text" name="name" placeholder="NAME" id="name">
+									<span class="hidden" id='name-span'>Please fill the required field</span>
 								</div>
 								<div class="con-mail">
-									<input type="text" name="email" placeholder="EMAIL">
+									<input type="text" name="email" placeholder="EMAIL" id="email">
+									<span class="hidden">Please fill the required field</span>
 								</div>
 								<div class="con-message">
-									<textarea placeholder="MESSAGE"></textarea>
+									<textarea placeholder="MESSAGE" id="message"></textarea>
+									<span class="hidden">Please fill the required field</span>
 								</div>
-								<button type="submit" class="btn-send">Send message</button>
+								<div class="btn-area">
+									<button type="submit" id="btn-send">Send message</button>
+									<span class="">Failed to send your e-mail. Please try it later.</span>
+								</div>
 							</div>
 							<div class="con-way">
 								<li class=""><i class="fa fa-envelope fa-lg cricle-bkg"></i><span>maxiaobo2015@163.com</span></li>
@@ -366,6 +372,10 @@
 
     		ev.currentTarget.className += " active";
 
+    		// if(col === '2'){
+    		// 	$('.accordion:first').click();
+    		// }
+
 			divSilde(col);
 		}
 		
@@ -387,16 +397,16 @@
 	 	}
 	</script>
 	<script type="text/javascript">
-	/***********************************************************************************************************
+	/******************************************************************************************
 	 *
-	 * Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons.
-	 * The  "active" class is used to add a background color to the current button when its belonging panel is open. The "show"  
-	 * class is used to open the specific accordion panel 
-	 *
-	 ***********************************************************************************************************/
+	 * Toggle between adding and removing the "active" and "show" classes when the user clicks 
+	 * on one of the "Section"  buttons.
+	 * The  "active" class is used to add a background color to the current button when its  
+	 * belonging panel is open. The "show" class is used to open the specific accordion panel 
+	 * 
+	 *******************************************************************************************/
 		// var acc = document.getElementsByClassName("accordion");
 		// var i;
-
 		// for (i = 0; i < acc.length; i++) {
 		//     acc[i].onclick = function(){
 		//         this.classList.toggle("active");
@@ -406,11 +416,10 @@
 		//         this.nextElementSibling.classList.toggle("show");
 		//     }
 		// }
-
 		$( "#acc" ).accordion({
 			heightStyle: "content",
 			collapsible: true,
-			active: false,
+			active: 0,
 			icons: {'header': 'fa fa-toggle-up fa-lg', 'activeHeader': 'fa fa-toggle-down fa-lg' },
 			activate: function( event, ui ) {
 				/*click 后是打开的，$.isEmptyObject(ui.newHeader.offset())就返回false*/
@@ -504,7 +513,6 @@
 		});
 	</script>
 	<script type="text/javascript">
-		
 		$("#open-1").click(function() {
 		  $("#video-demo").toggle( "slow" );
 		});
@@ -512,11 +520,10 @@
 		  $("#video-project").toggle( "slow" );
 		});
 	</script>
-<<<<<<< HEAD
 	<script type="text/javascript">
 		function myMap() {
 		    var mapOptions = {
-		        center: new google.maps.LatLng(51.5, -0.12),
+		        center: new google.maps.LatLng(39.3, 117.3),
 		        zoom: 10,
 		        mapTypeId: google.maps.MapTypeId.HYBRID
 		    }
@@ -524,7 +531,84 @@
 		}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-=======
->>>>>>> origin/master
+	<script type="text/javascript">
+		/*******************************************************************************
+		 *
+		 * Validation for the message.
+		 *
+		 *******************************************************************************/
+		 function validateEmail(email) {
+		    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+		}
+		 $('#btn-send').click(function(){
+		 	// console.log($('#name').val());
+		 	var name = $('#name').val();
+		 	var mail = $('#email').val();
+		 	var message = $('#message').val();
+
+		 	if(name == ''){
+		 		$('.con-name span').css("display", "inline-block");
+		 		$('.con-name input').css('border-color', '#f29090');
+		 	}
+		 	else{
+		 		$('.con-name span').css("display", "none");
+	 			$('.con-name input').css('border-color', '#dfe1e8');
+		 	}
+		 	if(mail != '' && validateEmail(mail)){
+				$('.con-mail span').css("display", "none");
+	 			$('.con-mail input').css('border-color', '#dfe1e8');			 	
+		 	}		 	
+		 	else{
+		 		if(mail == ''){
+		 			$('.con-mail span').text("Please fill the required field");
+			 		$('.con-mail span').css("display", "inline-block");
+		 			$('.con-mail input').css('border-color', '#f29090');
+		 		}
+		 		else{
+		 			if(!validateEmail(mail)){
+			 			$('.con-mail span').text("E-mail address seems invalid");
+				 		$('.con-mail span').css("display", "inline-block");
+				 		$('.con-mail input').css('border-color', '#f29090');
+			 		}
+		 		}
+		 	}
+		 	if(message == ''){
+		 		$('.con-message span').css("display", "inline-block");
+			 	$('.con-message textarea').css('border-color', '#f29090');
+		 	}
+		 	else {
+		 		$('.con-message span').css("display", "none");
+	 			$('.con-message textarea').css('border-color', '#dfe1e8');
+		 	}
+		 	if(name != '' && validateEmail(mail) && message != ''){
+		 		setTimeout(function(){
+		 			$('.btn-area span').css("display", "inline-block");
+		 		},1000);
+		 		/*$.ajax{
+		 			type:"POST",
+			      	url:"http://"+window.location.hostname+":port/route",
+			      	async:false,
+			      	cache:false,
+			      	data:{NAME:name,MAIL:mail,MSG:message},
+			      	error:function(err){
+			      		
+			      	},
+			     	success:function(data){
+			      		if(data.success){			
+			      			
+			      		}
+			      		else{
+			     			
+			      		}
+			      	}
+		 		}
+		 		*/
+		 	}
+		 	else{
+		 		$('.btn-area span').css("display", "none");
+		 	}
+		 });
+	</script>
 </body>
 </html>

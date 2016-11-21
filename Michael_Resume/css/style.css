@@ -18,6 +18,10 @@ ul {
 .hidden{
        display:none;
     }
+button {
+	outline: none;
+	cursor: pointer;
+}
 /*Important: for Safari*/
 @media screen and (max-device-width: 480px){
   body{
@@ -643,40 +647,76 @@ video {
 .fr {
 	float: right;
 }
-.con-name input{
+.con-name{
+	width: 200px;
+	height: auto;
 	float: left;
-	margin-right: 34px;
-	
+}
+.con-mail{
+	width: 200px;
+	height: auto;
+	float: right;
+}
+
+.con-frame span {
+	font-style: italic;
+	color: #f29090;
+	margin: 0px;
+	display: none;
 }
 input {
-	width: 200px;
-	height: 30px;
+	width: 180px;
+	height: 25px;
 	line-height: 20px;
-	border-radius: 25px;
+	border-radius: 20px;
 	border: 1.5px solid #dfe1e8;
 	outline-width: 0;
 	padding-left: 15px;
+	color: #999;
 }
 
 .con-message textarea{
+	color: #999;
 	clear: both;
 	width: 429px;
-	height: 100px;
-	border-radius: 25px;
+	height: 70px;
+	border-radius: 20px;
 	line-height: 20px;
-	padding: 20px;
-	margin:10px 0px 10px 0px;
+	padding: 10px 15px;
+	margin:10px 0px 0px 0px;
 	resize: none;
 	border: 1.5px solid #dfe1e8;
 	outline-width: 0;
 	font-family: inherit;
 }
-.btn-send {
-	display: block;
+#btn-send {
+	margin-top: 5px;
+	display: inline-block;
     border: 1px solid #00d4d4;
     background: 0 0;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 10px 15px;
     color: #3f3f3f;
     font-weight: bold;
+}
+#btn-send:active {
+	background-color: #00d4d4;
+	color: #fff;
+}
+.btn-area {
+	height: auto;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ddd;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ddd;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ddd;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ddd;
 }

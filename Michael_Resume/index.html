@@ -280,7 +280,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="3" class="tabcontent">
+			<div id="3" class="tabcontent">	
 				<div class="content-title"><h2>SERVICE.<span>WHAT-I-CAN-DO</span></h2></div>
 				<div class="ser-wrapper">
 					<div class="white-content">
@@ -325,7 +325,7 @@
 			<div id="4" class="tabcontent">
 					<div class="content-title"><h2>CONTACT.<span>WANNA-TALK-TO-ME?</span></h2></div>
 					<div class="con-wrapper">
-						<div id="map">My map will go here</div>
+						<div id="map" style="width:550px; height: 220px;"></div>
 						<div id="connect-tab">
 							<div class="con-frame">
 								<div class="con-name">
@@ -372,9 +372,9 @@
 
     		ev.currentTarget.className += " active";
 
-    		// if(col === '2'){
-    		// 	$('.accordion:first').click();
-    		// }
+    		if(col === '4'){
+    			google.maps.event.trigger(map, 'resize');
+    		}
 
 			divSilde(col);
 		}
@@ -429,19 +429,6 @@
 				}
 			}
 		});
-	/**********************************************************************************************************
-	 *
- 	 * Display the map
- 	 *
-	 **********************************************************************************************************/ 
-	/*	function myMap() {
-		    var mapOptions1 = {
-			    center: new google.maps.LatLng(39.3, 117.30),
-			    zoom:9,
-			    mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
-			var map1 = new google.maps.Map(document.getElementById("map"),mapOptions1);
-		}*/
 	</script>
 	<script type="text/javascript">
 		$('#EDbtn').one("click", function(){
@@ -521,13 +508,36 @@
 		});
 	</script>
 	<script type="text/javascript">
+/**********************************************************************************************************
+*
+* Display the map
+*
+**********************************************************************************************************/ 
 		function myMap() {
 		    var mapOptions = {
-		        center: new google.maps.LatLng(39.3, 117.3),
-		        zoom: 10,
-		        mapTypeId: google.maps.MapTypeId.HYBRID
-		    }
-		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+				scrollwheel: false,
+	            center: new google.maps.LatLng(39.14, 116.9),
+          	    zoom: 10,
+	            mapTypeId: google.maps.MapTypeId.TERRAIN
+	         }
+	        
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+			var icon = { 
+		        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+		        scale:8,
+	            fillColor: '#00d4d4',
+		        strokeColor :'#00d4d4',
+		        fillOpacity: 1,
+		        strokeWeight: 1
+		    };
+		  
+		    var marker = new google.maps.Marker({
+		        position: new google.maps.LatLng(39.025,117.3),
+		        map: map,
+		        draggable: true,
+		        icon: icon
+		    });
 		}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>

@@ -258,7 +258,7 @@ button.accordion {
     font-weight: bold;
     color: #abaeba;
     cursor: pointer;
-    padding: 12px 30px 6px 30px;
+    padding: 12px 30px 8px 30px;
     margin: 0; 
     width: 100%;
     text-align: left;
@@ -298,15 +298,17 @@ div.panel {
 
 .skill-sub-panel:nth-child(1){
 	height: 250px;
+	padding: 10px 40px;
 }
 .skill-sub-panel:nth-child(2){
 	height: 180px;
+	padding: 10px 40px;
 }
 .skill-sub-panel:nth-child(3){
-	height: 200px;
+	height: 150px;
 }
 .skill-sub-panel:nth-child(4){
-	height: 100px;
+	height: 130px;
 }
 .exp-1, .edu-1{
 	position: relative;
@@ -321,14 +323,30 @@ div.panel {
 .exp-1-info span, .edu-1-info span, .ach-1-content span{
 	display: block;
 }
+
 .exp-1-info img {
 	border:0px;
 	display: block;
+	padding-top: 5px;
 	position: absolute;
-	width: 80px;
+	width: 100px;
 	height: 25px;
 }
-
+.exp-time {
+	color: #d8d9db;
+	font-weight: bold;
+	font-size: 15px;
+}
+.organization {
+	font-size: 13px;
+	font-weight: bolder;
+	color: #000;
+	line-height: 25px;
+}
+.location {
+	font-size: 10px;
+	color: #111;
+}
 .edu-1-info img {
 	border:0px;
 	display: block;
@@ -518,6 +536,12 @@ strong {
 	color: #00d4d4;
 	padding-right: 10px;
 }
+.duty p{
+	width: auto;
+	font-weight: normal;
+	line-height: 20px;
+	font-size: 13px;
+}
 .ach-1-content {
 	width:230px;
 	height: 120px;
@@ -540,7 +564,7 @@ strong {
 	transform: translateY(-50%);
 	color: #00d4d4;
 }
-.ui-button {
+.ui-button{
 	margin-top: 5px;
 	display: block;
 	padding: 6px 12px;
@@ -560,8 +584,22 @@ strong {
 	user-select: none;
 	background-image: none;
 	border: 1px solid transparent;
-	border-radius: 4px;
+	border-radius: 5px;
 	background-color: #00d4d4;
+	color: #fff;
+}
+.blog-demo {
+	color: #fff;
+	padding: 8px 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: #00d4d4;
+	line-height: 30px;
+}
+.blog-demo:active {
 	color: #fff;
 }
 #video-demo{

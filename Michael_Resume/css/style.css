@@ -193,6 +193,7 @@ button {
 	list-style-type: none;
 	float: left;
 	width: 30px;
+	text-align: center;
 }
 #socials li i:hover{
 	font-size: large;
@@ -210,13 +211,18 @@ button {
 .tabcontent h2 {
 	margin: 0;
 }
-.tabcontent img {
+#head-image {
 	position: relative;
 	top: 60px;
 	width: 230px;
 	height: 260px;
 	margin: auto;
 	border: 5px solid #fff;
+}
+#signature {
+	width: 200px;
+	height: 65px;
+	margin: 80px 50px;
 }
 .tabcontent p {
 	font-size: smaller;

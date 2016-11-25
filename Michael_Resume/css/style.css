@@ -198,6 +198,7 @@ button {
 #socials li i:hover{
 	font-size: large;
 	color: #00bdbd;
+	cursor: pointer;
 }
 .character {
 	position: relative;
@@ -709,7 +710,7 @@ video {
 	display: none;
 }
 input {
-	width: 180px;
+	width: 175px;
 	height: 25px;
 	line-height: 20px;
 	border-radius: 20px;

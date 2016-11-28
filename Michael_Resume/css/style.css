@@ -765,3 +765,41 @@ input {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #ddd;
 }
+.sidenav {
+	height: 25%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 200px;
+    left: -150px;
+    background-color: #f1f1f1;
+    transition: 1s;
+    padding-top: 60px;
+    text-align:center;
+}
+#drawer {
+	position: absolute;
+  	top: 0;
+  	right: 0;
+  	width: 50px;
+  	height: 50px;
+  	border-bottom-right-radius: 30px;
+  	border-top-right-radius: 30px;
+  	color: #111;
+  	margin-right: -50px;
+  	background-color: #f1f1f1;
+}
+#drawer i {
+	top: 25%;
+	left: 20%;
+	position: absolute;
+	color: tomato;
+}
+.sidenav a {
+	color: #555c70;
+	font-size: normal;
+	font-weight: bold;
+}
+.sidenav a:hover {
+	color: #00d4d4;
+}

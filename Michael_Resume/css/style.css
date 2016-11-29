@@ -198,7 +198,6 @@ button {
 #socials li i:hover{
 	font-size: large;
 	color: #00bdbd;
-	cursor: pointer;
 }
 .character {
 	position: relative;
@@ -216,7 +215,7 @@ button {
 	position: relative;
 	top: 60px;
 	width: 230px;
-	height: 260px;
+	height: 230px;
 	margin: auto;
 	border: 5px solid #fff;
 }
@@ -710,7 +709,7 @@ video {
 	display: none;
 }
 input {
-	width: 175px;
+	width: 180px;
 	height: 25px;
 	line-height: 20px;
 	border-radius: 20px;
@@ -767,11 +766,11 @@ input {
 }
 .sidenav {
 	height: 25%;
-    width: 150px;
+    width: 200px;
     position: fixed;
     z-index: 1;
     top: 200px;
-    left: -150px;
+    left: -200px;
     background-color: #f1f1f1;
     transition: 1s;
     padding-top: 60px;
@@ -787,7 +786,7 @@ input {
   	border-top-right-radius: 30px;
   	color: #111;
   	margin-right: -50px;
-  	background-color: #f1f1f1;
+  	background-color: #f1f0f5;
 }
 #drawer i {
 	top: 25%;

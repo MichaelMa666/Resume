@@ -6,7 +6,8 @@
 	<script type="text/javascript" src="js/fastclick.js" ></script>	
 	<script type="text/javascript" src="js/circle-progress.js" ></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2Y38GTM0bQWQ04ShIUn3u88iECkrqGvK"></script>
+		
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/font/css/font-awesome.css">
 <head>
@@ -15,25 +16,25 @@
 <body ontouchstart="">
 	<div class="sidenav" id="mysidenav">
 		<div id="drawer"><i class="fa fa fa-download fa-2x"></i></div>
-		<a href="images/signature.png" download><span>中文简历下载<p><i class="fa fa fa-download fa-2x"></i></p><span></a>
-
+		<a href="images/resume.png" download><span>中文简历png格式下载<p><i class="fa fa fa-download fa-2x"></i></p><span></a>
 	</div>
 	<div id='main-container'>
 		<div id='myself'>
-			<img src="images/head.png"/>	
+			<img src="images/logo.png"/>	
 			<div id="sef_info">
 				<h1>马骁博<br>Michael Ma</h1><br>
 				<span>web developer</span>
 				<span>web service engineer</span>
 				<span>basketball fan</span>
-				<span>an optimistic guy</span>				
+				<span>an optimistic guy</span>
+				
 			</div>
 			<div id="socials">
 				<ul>
-					<li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-github-alt"></i></a></li>
-					<li><a href="http://weibo.com/u/2971637763"><i class="fa fa-weibo"></i></a></li>
-					<li><i class="fa fa-qq"></i><a class="hidden">QQ:458425507</a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-weibo"></i></a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-qq"></i></a></li>
 				</ul>
 			</div>
 			<div id="rights">Michael Ma 2016. All rights reserved</div>	
@@ -49,6 +50,7 @@
 				</li>
 				<li>
 					<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')">
+						<!-- <i class="fa fa-user-circle-o fa-3x"></i><br><span>resume</span></a> -->
 						<i class="fa fa-file-text fa-3x"></i><br><span>resume</span></a>
 					</li>
 					<li>
@@ -68,7 +70,7 @@
 					<p>I'm a new web developer based in TianJin city of China. I have been in bussiness about one and a half year and major in web development.</p>
 					<p>I devoted myself to front-end web before and I will hold on this path.</p>
 				</div>
-					<img id='head-image' src="images/head.png"/>
+					<img id='head-image' src="images/head.jpg"/>
 					<img id='signature' src="images/signature.png"/>
 			</div>
 			<div id="2" class="tabcontent">
@@ -94,7 +96,7 @@
 									</div>
 									<hr>
 									<div class="duty">
-										<p>My focus of work was on the design and programming internal web site front-end and coding some bash shell. Also provided customerized web products. At the same time, I was in charge of SVN managment for the whole software R&D</p>
+										<p>My focus of work is to design and programme the internal Web site front-end. Do some bash shell. Also provide customerized web products. At the same time, I was in charge of SVN managment for the whole software R&D</p>
 									</div>
 								</div>
 							</div>
@@ -115,7 +117,6 @@
 									<div class="major">Software Engineering Program</div>
 									<hr>
 									<div class="duty">
-										<li><i class="fa fa-check-circle"></i>C/C++ program design</li>	
 										<li><i class="fa fa-check-circle"></i>Java project</li>
 										<li><i class="fa fa-check-circle"></i>Network of computer</li>
 										<li><i class="fa fa-check-circle"></i>Advanced mathematics</li>
@@ -247,7 +248,7 @@
 							<li><i class="fa fa-check-circle"></i>strong problem solving skills</li>
 							<li><i class="fa fa-check-circle"></i>good communication ability</li>
 							<li><i class="fa fa-check-circle"></i>awareness of automation</li>
-							<li><i class="fa fa-check-circle"></i>photoshop beginner</li>
+							<!-- <li><i class="fa fa-check-circle"></i></li> -->
 						</div>
 					</div>
 					<button class="accordion">
@@ -262,21 +263,22 @@
 								</div>
 								<div class="ach-1-content">
 									<div class="circle-icon"><i class="fa fa-server fa-2x"></i></div>
-									<span>&nbsp;2 stable server</span>
+									<span>&nbsp;1 stable server</span>
 								</div>
 								
 								<div class="ach-1-video">
+									<!-- <button class="ui-button" onclick="{location.href='http://htmlpreview.github.io/?https://github.com/MichaelMa666/M-League/blob/master/views/index.html'}">Blog Client Demo</button>  -->
 									<a class="blog-demo" href="http://htmlpreview.github.io/?https://github.com/MichaelMa666/M-League/blob/master/views/index.html">Blog Client Demo</a>
 									<button class="ui-button" id="open-1">Introduction Video for Project</button>
 									<div id="video-demo" class="hidden">
 										<video width="460" height="345" controls>
-										    <source src="material/New_Rack_Test_Project.mp4" type="video/mp4">
+										  <source src="material/New_Rack_Test_Project.mp4" type="video/mp4">
 										</video>
 									</div>
 									<button class="ui-button" id="open-2">Introduction Video for Program</button>
 									<div id="video-project" class="hidden">
 										<video width="460" height="280" controls>
-										    <source src="material/SCAN_DB_UI.mp4" type="video/mp4">
+										  <source src="material/SCAN_DB_UI.mp4" type="video/mp4">
 										</video>
 									</div>
 								</div>
@@ -294,7 +296,7 @@
 						</div>
 						<div class="ser-content fr">
 							<h4>Front-End Development</h4>
-							<p>I use a wide array of latest front technologies including JavaScript, HTML5, CSS3, etc. And known something like BackBone.js, require.js, Bootstrap and jQuery. Now I investigate the cross-browser and cross-platform web site.</p>
+							<p>I use a wide array of latest front technologies including JavaScript, HTML5, CSS3, etc. And known something like BackBone.js, require.js. Now I investigate the cross-browser and cross-platform web site.</p>
 						</div>
 					</div>
 					<div class="grey-content">
@@ -303,7 +305,7 @@
 						</div>
 						<div class="ser-content fl">
 							<h4>Back-End Development</h4>
-							<p>I know well about node.js and its frame Express. Used to build End server by Express. There is producing a MVC thought in my mind. I am also good at Linux command line and bash shell.</p>
+							<p>I know well about node.js and its frame Express. Used to build End server by Express. There is producing a MVC thought in my mind. I am also good at Linux command line and bash shell. </p>
 						</div>
 					</div>
 					<div class="white-content">
@@ -329,7 +331,8 @@
 			<div id="4" class="tabcontent">
 					<div class="content-title"><h2>CONTACT.<span>WANNA-TALK-TO-ME?</span></h2></div>
 					<div class="con-wrapper">
-						<div id="map" style="width:550px; height: 220px;"></div>
+						<!-- <div id="map" style="width:550px; height: 220px;"></div> -->
+						<div id="allmap" style="width:550px; height: 220px;"></div>
 						<div id="connect-tab">
 							<div class="con-frame">
 								<div class="con-name">
@@ -376,9 +379,9 @@
 
     		ev.currentTarget.className += " active";
 
-    		if(col === '4'){
-    			google.maps.event.trigger(map, 'resize');
-    		}
+    		// if(col === '4'){
+    		// 	google.maps.event.trigger(map, 'resize');
+    		// }
 
 			divSilde(col);
 		}
@@ -395,7 +398,7 @@
 
 	 		var mg_left = $('#ulbar li').first().offset().left - $('#ulbar').offset().left;
 	 		
-	 		// console.log(mg_left);
+	 		console.log(mg_left);
 
 	 		$('#vernier').css("left", (col - 1) * 100.8 + mg_left);
 	 	}
@@ -409,17 +412,17 @@
 	 * belonging panel is open. The "show" class is used to open the specific accordion panel 
 	 * 
 	 *******************************************************************************************/
-		/*var acc = document.getElementsByClassName("accordion");
-		var i;
-		for (i = 0; i < acc.length; i++) {
-		    acc[i].onclick = function(){
-		        this.classList.toggle("active");
-		        // console.log(this.children[1]);
-		        this.children[1].classList.toggle("fa-toggle-down");
-		        this.children[1].classList.toggle("fa-toggle-up");
-		        this.nextElementSibling.classList.toggle("show");
-		    }
-		}*/
+		// var acc = document.getElementsByClassName("accordion");
+		// var i;
+		// for (i = 0; i < acc.length; i++) {
+		//     acc[i].onclick = function(){
+		//         this.classList.toggle("active");
+		//         // console.log(this.children[1]);
+		//         this.children[1].classList.toggle("fa-toggle-down");
+		//         this.children[1].classList.toggle("fa-toggle-up");
+		//         this.nextElementSibling.classList.toggle("show");
+		//     }
+		// }
 		$( "#acc" ).accordion({
 			heightStyle: "content",
 			collapsible: true,
@@ -428,9 +431,8 @@
 			activate: function( event, ui ) {
 				/*click 后是打开的，$.isEmptyObject(ui.newHeader.offset())就返回false*/
 				if(!$.isEmptyObject(ui.newHeader.offset())) {
-
+					console.log(ui.newHeader.offset().top);
 					$('#acc').animate({ scrollTop: ui.newHeader.offset().top - 183 }, 'slow');
-
 				}
 			}
 		});
@@ -442,7 +444,7 @@
 			var arrWidth = new Array;
 			var items = $('.label').length;
 			var wd =parseInt($('.progress-wraper').css("width").slice(0, -2));
-
+			console.log(wd);
 			for(var i = 0; i< items; i++){
 				arrSkill.push(parseFloat($('.label')[i].innerHTML));
 			}
@@ -485,9 +487,8 @@
   				
   			});*/
   			$('.circle-progress').each(function(){
-  				
   				var val = parseInt($(this).find('strong').text().slice(0, -1));
-  				
+  				console.log(val);
   				$(this).circleProgress({
 			        value: val/100,
 			        size: 80,
@@ -522,7 +523,7 @@
 		function myMap() {
 		    var mapOptions = {
 				scrollwheel: false,
-	            center: new google.maps.LatLng(39.19, 116.9),
+	            center: new google.maps.LatLng(39.14, 116.9),
           	    zoom: 10,
 	            mapTypeId: google.maps.MapTypeId.TERRAIN
 	         }
@@ -539,14 +540,34 @@
 		    };
 		  
 		    var marker = new google.maps.Marker({
-		        position: new google.maps.LatLng(39.075,117.29),
+		        position: new google.maps.LatLng(39.025,117.3),
 		        map: map,
 		        draggable: true,
 		        icon: icon
 		    });
 		}
+
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		map.centerAndZoom(new BMap.Point(116.90, 39.19), 11);  // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+		map.setCurrentCity("天津");          // 设置地图显示的城市 此项是必须设置的
+		// map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+		var point = new BMap.Point(117.28,39.08);
+
+		var vectorMarker = new BMap.Marker(new BMap.Point(point.lng,point.lat), {
+		  // 指定Marker的icon属性为Symbol
+		  icon: new BMap.Symbol(BMap_Symbol_SHAPE_POINT, {
+		    scale: 2,//图标缩放大小
+		    fillColor: "#00d4d4",//填充颜色
+		    strokeColor:"#00d4d4",
+		    fillOpacity: 1//填充透明度
+		  })
+		});
+		map.addOverlay(vectorMarker);
+		map.setViewport({center:new BMap.Point(116.90, 39.19),zoom:11})
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
 	<script type="text/javascript">
 		/*******************************************************************************
 		 *
@@ -558,7 +579,7 @@
 		    return re.test(email);
 		}
 		 $('#btn-send').click(function(){
-
+		 	// console.log($('#name').val());
 		 	var name = $('#name').val();
 		 	var mail = $('#email').val();
 		 	var message = $('#message').val();
@@ -630,11 +651,11 @@
 
 		$(document).ready(function(){
 		    $("#drawer").click(function(){
-		    	if($("#mysidenav").css("left") == "-150px"){
+		    	if($("#mysidenav").css("left") == "-200px"){
 		    		$("#mysidenav").css("left","0px");
 		    	}
 		    	else{
-		    		$("#mysidenav").css("left","-150px");
+		    		$("#mysidenav").css("left","-200px");
 		    	}		        
 		    });
 		});

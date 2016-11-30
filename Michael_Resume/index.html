@@ -7,8 +7,6 @@
 	<script type="text/javascript" src="js/circle-progress.js" ></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2Y38GTM0bQWQ04ShIUn3u88iECkrqGvK"></script>
-		
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="css/font/css/font-awesome.css">
 <head>
 	<title></title>
@@ -26,8 +24,7 @@
 				<span>web developer</span>
 				<span>web service engineer</span>
 				<span>basketball fan</span>
-				<span>an optimistic guy</span>
-				
+				<span>an optimistic guy</span>				
 			</div>
 			<div id="socials">
 				<ul>
@@ -50,7 +47,6 @@
 				</li>
 				<li>
 					<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')">
-						<!-- <i class="fa fa-user-circle-o fa-3x"></i><br><span>resume</span></a> -->
 						<i class="fa fa-file-text fa-3x"></i><br><span>resume</span></a>
 					</li>
 					<li>
@@ -128,7 +124,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="accordion" id="EDbtn">
+					<button class="accordion" id="SKbtn">
 						<i class="fa fa-cubes"></i>&nbsp;Skill
 					</button>
 					<div class="panel">
@@ -267,7 +263,6 @@
 								</div>
 								
 								<div class="ach-1-video">
-									<!-- <button class="ui-button" onclick="{location.href='http://htmlpreview.github.io/?https://github.com/MichaelMa666/M-League/blob/master/views/index.html'}">Blog Client Demo</button>  -->
 									<a class="blog-demo" href="http://htmlpreview.github.io/?https://github.com/MichaelMa666/M-League/blob/master/views/index.html">Blog Client Demo</a>
 									<button class="ui-button" id="open-1">Introduction Video for Project</button>
 									<div id="video-demo" class="hidden">
@@ -362,304 +357,11 @@
 			</div>
 		</div>
 	</div>	
-	<script type="text/javascript">
-	/***********************************************************************
-	 * 
-	 *Tab Control
-	 *
-	 ***********************************************************************/
-		function openContent(ev, col){
 
-			$('.tabcontent').css("display", "none");
-
-			$('.tablinks').removeClass("active");
-
-			// document.getElementById(col).style.display = "block";
-    		$('#' + col).css("display", "block")
-
-    		ev.currentTarget.className += " active";
-
-    		// if(col === '4'){
-    		// 	google.maps.event.trigger(map, 'resize');
-    		// }
-
-			divSilde(col);
-		}
-		
-		// document.getElementById('defaultOpen').click();
-		$('#defaultOpen')[0].click();
-
-	/************************************************************************
-	 * 
-	 * Tab Control slide
-	 *
-	 ************************************************************************/
-	 	function divSilde(col){
-
-	 		var mg_left = $('#ulbar li').first().offset().left - $('#ulbar').offset().left;
-	 		
-	 		console.log(mg_left);
-
-	 		$('#vernier').css("left", (col - 1) * 100.8 + mg_left);
-	 	}
-	</script>
-	<script type="text/javascript">
-	/******************************************************************************************
-	 *
-	 * Toggle between adding and removing the "active" and "show" classes when the user clicks 
-	 * on one of the "Section"  buttons.
-	 * The  "active" class is used to add a background color to the current button when its  
-	 * belonging panel is open. The "show" class is used to open the specific accordion panel 
-	 * 
-	 *******************************************************************************************/
-		// var acc = document.getElementsByClassName("accordion");
-		// var i;
-		// for (i = 0; i < acc.length; i++) {
-		//     acc[i].onclick = function(){
-		//         this.classList.toggle("active");
-		//         // console.log(this.children[1]);
-		//         this.children[1].classList.toggle("fa-toggle-down");
-		//         this.children[1].classList.toggle("fa-toggle-up");
-		//         this.nextElementSibling.classList.toggle("show");
-		//     }
-		// }
-		$( "#acc" ).accordion({
-			heightStyle: "content",
-			collapsible: true,
-			active: 0,
-			icons: {'header': 'fa fa-toggle-up fa-lg', 'activeHeader': 'fa fa-toggle-down fa-lg' },
-			activate: function( event, ui ) {
-				/*click 后是打开的，$.isEmptyObject(ui.newHeader.offset())就返回false*/
-				if(!$.isEmptyObject(ui.newHeader.offset())) {
-					console.log(ui.newHeader.offset().top);
-					$('#acc').animate({ scrollTop: ui.newHeader.offset().top - 183 }, 'slow');
-				}
-			}
-		});
-	</script>
-	<script type="text/javascript">
-		$('#EDbtn').one("click", function(){
-			timer = 3000;
-			var arrSkill = new Array;
-			var arrWidth = new Array;
-			var items = $('.label').length;
-			var wd =parseInt($('.progress-wraper').css("width").slice(0, -2));
-			console.log(wd);
-			for(var i = 0; i< items; i++){
-				arrSkill.push(parseFloat($('.label')[i].innerHTML));
-			}
-			for(var i = 0; i < items; i ++){
-				arrWidth.push(wd * arrSkill[i]/100);
-			}
-
-			for(var i = 0; i < items; i ++){
-				
-				$('#bar-'+i).animate({width: arrWidth[i] + 'px'},timer);	
-			}
-			for(var i = 0; i < items; i ++){
-				(function(i){
-					var id, counter = 0;
-				    id = setInterval(function() {
-				        $("#lab-"+i).text(counter++ + '%');
-				        if (counter > arrSkill[i]) { clearInterval(id)};
-				    }, timer/arrSkill[i]);
-				})(i);
-			}
-/************************************************************************************************
- *
- * Circle process bar operate each element of class="circle-progress"
- *
- ************************************************************************************************/
-			/*$('.circle-progress').circleProgress({
-		        value: 0.7,
-		        size: 80,
-		        fill: {
-		            gradient: ["#00bdbd"]
-		        },
-		        animation:{
-		        	duration:3000
-		        },
-		        lineCap: 'round'
-		    }).on('circle-animation-progress', function(event, progress) {
-		    
-		    		console.log(progress);
-  					$(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>')
-  				
-  			});*/
-  			$('.circle-progress').each(function(){
-  				var val = parseInt($(this).find('strong').text().slice(0, -1));
-  				console.log(val);
-  				$(this).circleProgress({
-			        value: val/100,
-			        size: 80,
-			        startAngle: -Math.PI/2,
-			        fill: {
-			            gradient: ["#00d4d4"]
-			        },
-			        animation:{
-			        	duration:3000
-			        },
-			        lineCap: 'round'
-			    }).on('circle-animation-progress', function(event, progress) {
-	  					$(this).find('strong').html(parseInt(val * progress) + '<i>%</i>')
-	  			});
-  			});
-		});
-	</script>
-	<script type="text/javascript">
-		$("#open-1").click(function() {
-		  $("#video-demo").toggle( "slow" );
-		});
-		$("#open-2").click(function() {
-		  $("#video-project").toggle( "slow" );
-		});
-	</script>
-	<script type="text/javascript">
-/**********************************************************************************************************
-*
-* Display the map
-*
-**********************************************************************************************************/ 
-		function myMap() {
-		    var mapOptions = {
-				scrollwheel: false,
-	            center: new google.maps.LatLng(39.14, 116.9),
-          	    zoom: 10,
-	            mapTypeId: google.maps.MapTypeId.TERRAIN
-	         }
-	        
-			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-			var icon = { 
-		        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-		        scale:8,
-	            fillColor: '#00d4d4',
-		        strokeColor :'#00d4d4',
-		        fillOpacity: 1,
-		        strokeWeight: 1
-		    };
-		  
-		    var marker = new google.maps.Marker({
-		        position: new google.maps.LatLng(39.025,117.3),
-		        map: map,
-		        draggable: true,
-		        icon: icon
-		    });
-		}
-
-		// 百度地图API功能
-		var map = new BMap.Map("allmap");    // 创建Map实例
-		map.centerAndZoom(new BMap.Point(116.90, 39.19), 11);  // 初始化地图,设置中心点坐标和地图级别
-		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-		map.setCurrentCity("天津");          // 设置地图显示的城市 此项是必须设置的
-		// map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
-		var point = new BMap.Point(117.28,39.08);
-
-		var vectorMarker = new BMap.Marker(new BMap.Point(point.lng,point.lat), {
-		  // 指定Marker的icon属性为Symbol
-		  icon: new BMap.Symbol(BMap_Symbol_SHAPE_POINT, {
-		    scale: 2,//图标缩放大小
-		    fillColor: "#00d4d4",//填充颜色
-		    strokeColor:"#00d4d4",
-		    fillOpacity: 1//填充透明度
-		  })
-		});
-		map.addOverlay(vectorMarker);
-		map.setViewport({center:new BMap.Point(116.90, 39.19),zoom:11})
-	</script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
-	<script type="text/javascript">
-		/*******************************************************************************
-		 *
-		 * Validation for the message.
-		 *
-		 *******************************************************************************/
-		 function validateEmail(email) {
-		    var re = /(\w)+[@](\w)+[.](\w)+/;
-		    return re.test(email);
-		}
-		 $('#btn-send').click(function(){
-		 	// console.log($('#name').val());
-		 	var name = $('#name').val();
-		 	var mail = $('#email').val();
-		 	var message = $('#message').val();
-
-		 	if(name == ''){
-		 		$('.con-name span').css("display", "inline-block");
-		 		$('.con-name input').css('border-color', '#f29090');
-		 	}
-		 	else{
-		 		$('.con-name span').css("display", "none");
-	 			$('.con-name input').css('border-color', '#dfe1e8');
-		 	}
-		 	if(mail != '' && validateEmail(mail)){
-				$('.con-mail span').css("display", "none");
-	 			$('.con-mail input').css('border-color', '#dfe1e8');			 	
-		 	}		 	
-		 	else{
-		 		if(mail == ''){
-		 			$('.con-mail span').text("Please fill the required field");
-			 		$('.con-mail span').css("display", "inline-block");
-		 			$('.con-mail input').css('border-color', '#f29090');
-		 		}
-		 		else{
-		 			if(!validateEmail(mail)){
-			 			$('.con-mail span').text("E-mail address seems invalid");
-				 		$('.con-mail span').css("display", "inline-block");
-				 		$('.con-mail input').css('border-color', '#f29090');
-			 		}
-		 		}
-		 	}
-		 	if(message == ''){
-		 		$('.con-message span').css("display", "inline-block");
-			 	$('.con-message textarea').css('border-color', '#f29090');
-		 	}
-		 	else {
-		 		$('.con-message span').css("display", "none");
-	 			$('.con-message textarea').css('border-color', '#dfe1e8');
-		 	}
-		 	if(name != '' && validateEmail(mail) && message != ''){
-		 		setTimeout(function(){
-		 			$('.btn-area span').css("display", "inline-block");
-		 		},1000);
-		 		/*$.ajax{
-		 			type:"POST",
-			      	url:"http://"+window.location.hostname+":port/route",
-			      	async:false,
-			      	cache:false,
-			      	data:{NAME:name,MAIL:mail,MSG:message},
-			      	error:function(err){
-			      		
-			      	},
-			     	success:function(data){
-			      		if(data.success){			
-			      			
-			      		}
-			      		else{
-			     			
-			      		}
-			      	}
-		 		}
-		 		*/
-		 	}
-		 	else{
-		 		$('.btn-area span').css("display", "none");
-		 	}
-		 });
-	</script>
-	<script type="text/javascript">
-
-		$(document).ready(function(){
-		    $("#drawer").click(function(){
-		    	if($("#mysidenav").css("left") == "-200px"){
-		    		$("#mysidenav").css("left","0px");
-		    	}
-		    	else{
-		    		$("#mysidenav").css("left","-200px");
-		    	}		        
-		    });
-		});
-
-	</script>
+	<script type="text/javascript" src="js/validation.js"></script>
+	<script type="text/javascript" src="js/drawer.js"></script>
 </body>
 </html>

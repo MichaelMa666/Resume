@@ -24,22 +24,15 @@ button {
 }
 /*Important: for Safari*/
 @media screen and (max-device-width: 480px){
-  body, html{
-/*     	-webkit-text-size-adjust: none; */
-    	min-height:100%;
-	min-width:100%;
-	margin:0;
-	background-color:tomato;
+ body{
+    -webkit-text-size-adjust: none;
   }
   #main-container {
-  	height:100vh;
-	  margin:0;
-	  min-width:50vw;
-	  background-color:green;
+  	height: 80vh;
   }
-	#myself, #details {
-		margin:0;
-	}
+  .tabcontent {
+  	height: 60vh;
+  }
 }
 
 #main-container {

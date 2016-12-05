@@ -32,9 +32,9 @@ button {
 	background-color:tomato;
   }
   #main-container {
-  	height:1000px;
+  	height:100vh;
 	  margin:0;
-	  min-width:100%;
+	  min-width:50vw;
 	  background-color:green;
   }
 	#myself, #details {

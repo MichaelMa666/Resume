@@ -28,6 +28,7 @@ button {
     	-webkit-text-size-adjust: none;
     	height:100vh;
 	margin:0;
+	background-color:#eee;
   }
   #main-container {
   	height: 80vh;

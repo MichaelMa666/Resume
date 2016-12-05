@@ -29,7 +29,7 @@ button {
     	min-height:100%;
 	min-width:100%;
 	margin:0;
-	background-color:orange;
+	background-color:tomato;
   }
   #main-container {
   	min-height:100%;
@@ -37,7 +37,6 @@ button {
 	  min-width:100%;
   }
 	#myself, #details {
-		min-height:100%;
 		margin:0;
 	}
 }

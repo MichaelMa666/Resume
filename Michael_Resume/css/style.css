@@ -24,17 +24,12 @@ button {
 }
 /*Important: for Safari*/
 @media screen and (max-device-width: 480px){
-	html{
-		min-height:100%;
-		width:100%;
-		margin:0;
-	}
-  body{
+  body, html{
 /*     	-webkit-text-size-adjust: none; */
     	min-height:100%;
-	  width:100%;
+	min-width:100%;
 	margin:0;
-	background-color:#eee;
+	background-color:#00d4d4;
   }
   #main-container {
   	height: 80%;

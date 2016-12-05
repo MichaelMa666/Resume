@@ -29,13 +29,10 @@ button {
     	min-height:100%;
 	min-width:100%;
 	margin:0;
-	background-color:#00d4ee;
+	background-color:red;
   }
   #main-container {
-  	height: 100%;
-  }
-  .tabcontent {
-  	height: 60%;
+  	height: 100vh;
   }
 	#myself, #details {
 		height:70%;

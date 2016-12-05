@@ -37,6 +37,9 @@ button {
   .tabcontent {
   	height: 60%;
   }
+	#myself, #details {
+		height:70%;
+	}
 }
 
 #main-container {

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="text/css" href="images/logo.png">
+	<title>马骁博 Michael 的简历</title>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>	
+	<script type="text/javascript" src="js/fastclick.js" ></script>	
+	<script type="text/javascript" src="js/circle-progress.js" ></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=2Y38GTM0bQWQ04ShIUn3u88iECkrqGvK&s=1"></script>
+	<link rel="stylesheet" href="css/font/css/font-awesome.css">
+<head>
+	<title></title>
+</head>
+<body ontouchstart="">
+	<div class="sidenav" id="mysidenav">
+		<div id="drawer"><i class="fa fa fa-download fa-2x"></i></div>
+		<a href="images/resume.png" download><span>简历png格式下载<p><i class="fa fa fa-download fa-2x"></i></p><span></a>
+	</div>
+	<div id='main-container'>
+		<div id='myself'>
+			<img src="images/logo.png"/>	
+			<div id="sef_info">
+				<h1>马骁博<br>Michael Ma</h1><br>
+				<span>web前端研发工程师</span>
+				<span>nonde.js工程师</span>
+				<span>篮球球迷</span>
+				<span>墨尔本曳步舞</span>
+				<span>铲屎官</span>		
+			</div>
+			<div id="socials">
+				<ul>
+					<li><a href="https://www.instagram.com/maxiaobo2015/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="http://github.com/MichaelMa666"><i class="fa fa-github-alt"></i></a></li>
+				</ul>
+			</div>
+			<div id="rights">Michael Ma &copy;2018. All rights reserved</div>	
+		</div>
+		<div id='details'>
+			<ul id='ulbar'>			
+				<div id="vernier"></div>
+				<li id="test">
+					<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '1')" id="defaultOpen">
+						<i class="fa fa-home fa-3x"></i><br>
+						<span>home</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '2')">
+						<i class="fa fa-file-text fa-3x"></i><br><span>resume</span></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '3')">
+							<i class="fa fa-tasks fa-3x"></i><br>
+							<span>services</span>
+						</a>
+					</li>
+					<li><a href="javascript:void(0)" class="tablinks" onclick="openContent(event, '4')"><i class="fa fa-envelope-open fa-3x"></i><br><span>contact</span></a></li>
+				</ul>
+			<div id="1" class="tabcontent">
+				<div class="content-title"><h2>HOME.</h2></div>
+				<div class="character">
+					<h2>务实.</h2>
+					<h2>创新.</h2>
+					<h2>果断.</h2>
+					<p>我是一名中级web前端工程师，目前居住在北京市，2015年毕业于吉林大学软件学院，主要从事的方向是web前端开发。</p>
+					<p>本人从业初期给自己定的方向是web前端研发兼具服务端基本技能，并且今后依然沿着这条路走下去。</p>
+				</div>
+					<img id='head-image' src="images/head.jpg"/>
+					<img id='signature' src="images/signature.png"/>
+			</div>
+			<div id="2" class="tabcontent">
+				
+				<div class="content-title"><h2>RESUME.<span>UP-TO-DATE</span></h2></div>
+				<div id="acc">
+					<button class="accordion">
+						<i class="fa fa-suitcase"></i>&nbsp;&nbsp;Experience
+					</button>
+					<div class="panel">
+						<div class="exp-sub-panel">
+							<div class="exp">
+								<div class="exp-info">
+									<span class="exp-time">Jul 2015 - Dec 2017</span>
+									<span class="organization">富士康科技集团</span>
+									<span class="organization">CESBG云计算事业群</span>
+									<span class="location">天津市东丽区</span>
+									<img src="images/fox.jpg">
+								</div>
+								
+								<div class="exp-content">
+									<div class="position">
+										前端工程师
+									</div>
+									<hr>
+									<div class="duty">
+										<li><i class="fa fa-check-circle"></i><span>负责公司内部web App前后端的设计和制作。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>按照其他部门的需求写一些shell脚本辅助工作。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>还有根据客户需要（包括百度，阿里，苹果等）客制化BMC远程管理工具。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>同时司职整个R&D软件部门SVN管理员，包括维护SVN数据库和备份数据库等。</span></li>
+									</div>
+								</div>
+							</div>
+							<div class="exp">
+								<div class="exp-info">
+									<span class="exp-time">Feb 2017 - Now</span>
+									<span class="organization">中邮信息科技（北京）有限公司</span>
+									<span class="organization">中国邮政软件开发中心二部</span>
+									<span class="location">北京市西三旗</span>
+									<img src="images/cpsd.png">
+								</div>
+								
+								<div class="exp-content">
+									<div class="position">
+										前端工程师
+									</div>
+									<hr>
+									<div class="duty">
+										<li><i class="fa fa-check-circle"></i><span>担任“新一代”寄递项目<b>平台组</b>前端工程师。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>负责项目前端框架的定制、插件封装、示例demo的编写。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>负责项目单点登录子系统和门户子系统的前端开发工作。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>负责项目组Jenkins的维护，新增工程配置，构建报错的处理等等。</span></li>
+										<li><i class="fa fa-check-circle"></i><span>负责MQ消息积压监控系统的所有前端工作。</span></li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="accordion">
+						<i class="fa fa-graduation-cap"></i>&nbsp;Education
+					</button>
+					<div class="panel">
+						<div class="edu-sub-panel">
+							<div class="edu-1">
+								<div class="edu-1-info">
+									<span class="exp-time">Aug 2011 - Jul 2015</span>
+									<span class="organization">吉林大学</span>
+									<img src="images/edu.jpg">
+								</div>
+								<div class="edu-1-content">
+									<div class="major">软件工程专业</div>
+									<hr>
+									<div class="course">
+										<li><i class="fa fa-check-circle"></i><span>Java程序设计</span></li>
+										<li><i class="fa fa-check-circle"></i><span>计算机网络</span></li>
+										<li><i class="fa fa-check-circle"></i><span>高等数学</span></li>
+										<li><i class="fa fa-check-circle"></i><span>数据结构</span></li>
+										<li><i class="fa fa-check-circle"></i><span>数据库系统概念</span></li>
+										<li><i class="fa fa-check-circle"></i><span>项目管理</span></li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="accordion" id="SKbtn">
+						<i class="fa fa-cubes"></i>&nbsp;Skill
+					</button>
+					<div class="panel">
+						<div class="skill-sub-panel">
+							<p>技术</p>
+							<div class="object-bar">
+								<div class="progress-title">JavaScript</div>
+								<div class="progress-wrap">
+									<div class="progress-wraper">
+										<div class="progress-bar" id="bar-0"></div>
+									</div>
+									<div class="label" id="lab-0">85%</div>
+								</div>
+							</div>
+							<div class="object-bar">
+								<div class="progress-title">Node.js</div>
+								<div class="progress-wrap">
+									<div class="progress-wraper">
+										<div class="progress-bar" id="bar-1"></div>
+									</div>
+									<div class="label" id="lab-1">70%</div>
+								</div>
+							</div>
+							<div class="object-bar">
+								<div class="progress-title">Vue.js</div>
+								<div class="progress-wrap">
+									<div class="progress-wraper">
+										<div class="progress-bar" id="bar-2"></div>
+									</div>
+									<div class="label" id="lab-2">65%</div>
+								</div>
+							</div>
+							<div class="object-bar">
+								<div class="progress-title">CSS3</div>
+								<div class="progress-wrap">
+									<div class="progress-wraper">
+										<div class="progress-bar" id="bar-3"></div>
+									</div>
+									<div class="label" id="lab-3">90%</div>
+								</div>
+							</div>
+							
+							<div class="object-bar">
+								<div class="progress-title">HTML5</div>
+								<div class="progress-wrap">
+									<div class="progress-wraper">
+										<div class="progress-bar" id="bar-4"></div>
+									</div>
+									<div class="label" id="lab-4">90%</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="skill-sub-panel">
+							<p>环境和软件</p>
+							<div class="circle-wrapper">
+								<div class ="circle-progress">
+									<strong>75<i>%</i></strong>
+								</div>
+								<span>Linux</span>
+							</div>
+							
+							<div class="circle-wrapper">
+								<div class ="circle-progress">
+									<strong>85<i>%</i></strong>
+								</div>
+								<span>Chrome</span>
+							</div>
+							
+							<div class="circle-wrapper">
+								<div class ="circle-progress">
+									<strong>80<i>%</i></strong>
+								</div>
+								<span>SVN</span>
+							</div>
+
+							<div class="circle-wrapper">
+								<div class ="circle-progress">
+									<strong>60<i>%</i></strong>
+								</div>
+								<span>git</span>
+							</div>
+
+							<div class="circle-wrapper">
+								<div class ="circle-progress">
+									<strong>60<i>%</i></strong>
+								</div>
+								<span>Jenkins</span>
+							</div>
+
+							<div class="circle-wrapper">
+								<div class ="circle-progress">
+									<strong>85<i>%</i></strong>
+								</div>
+								<span>PowerPoint</span>
+							</div>
+						</div>
+						
+						<div class="skill-sub-panel">
+							<p>语言</p>
+							<!-- <div class="lang-kind">中文</div>
+							<div class="lang-star">
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+							</div>
+							<div class="lang-prop">母语</div> -->
+							<div class="lang-kind">英语</div>
+							<div class="lang-star">
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg"></i>
+								<i class="fa fa-star fa-lg empty"></i>
+								<i class="fa fa-star fa-lg empty"></i>
+							</div> 
+							<div class="lang-prop">四级</div>
+						</div>
+						<div class="skill-sub-panel">
+							<p>补充</p>
+							<li><i class="fa fa-check-circle"></i><span>较强的组织能力</span></li>
+							<li><i class="fa fa-check-circle"></i><span>较强的学习能力</span></li>
+							<li><i class="fa fa-check-circle"></i><span>善于发现和解决问题</span></li>
+							<li><i class="fa fa-check-circle"></i><span>良好的沟通能力</span></li>
+							<li><i class="fa fa-check-circle"></i><span>具有一定的软件工程意识</span></li>
+							<!-- <li><i class="fa fa-check-circle"></i></li> -->
+						</div>
+					</div>
+					<button class="accordion">
+						<i class="fa fa-trophy"></i>&nbsp;&nbsp;Achievements
+					</button>
+					<div class="panel">
+						<div class="ach-sub-panel">
+							<div class="ach-1">
+								<div class="ach-1-content">
+									<div class="circle-icon"><i class="fa fa-users fa-2x"></i></div>
+									<span>&nbsp;4 个受欢迎的客户端</span> 
+								</div>
+								<div class="ach-1-content">
+									<div class="circle-icon"><i class="fa fa-server fa-2x"></i></div>
+									<span>&nbsp;1 个稳定的服务端</span>
+								</div>
+								
+								<div class="ach-1-video">
+									<a class="blog-demo" href="https://michaelma666.github.io/M-League/views/index.html">个人博客界面展示</a>
+									<button class="ui-button" id="open-1">“新型机柜测试流程”项目介绍</button>
+									<div id="video-demo" class="hidden">
+										<video width="460" height="345" controls>
+										  <source src="material/New_Rack_Test_Project.mp4" type="video/mp4">
+										</video>
+									</div>
+									<button class="ui-button" id="open-2">“新型机柜测试流程”项目展示</button>
+									<div id="video-project-test" class="hidden">
+										<video width="460" height="280" controls>
+										  <source src="material/SCAN_DB_UI.mp4" type="video/mp4">
+										</video>
+									</div>
+									<button class="ui-button" id="open-3">“新一代”寄递平台项目展示</button>
+									<div id="video-project-xyd" class="hidden">
+										<video width="460" height="280" controls>
+										  <source src="material/SCAN_DB_UI.mp4" type="video/mp4">
+										</video>
+									</div>
+									<button class="ui-button" id="open-4">MQ消息积压监控系统项目展示</button>
+									<div id="video-project-mq" class="hidden">
+										<video width="460" height="280" controls>
+										  <source src="material/SCAN_DB_UI.mp4" type="video/mp4">
+										</video>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="3" class="tabcontent">	
+				<div class="content-title"><h2>SERVICE.<span>WHAT-I-CAN-DO</span></h2></div>
+				<div class="ser-wrapper">
+					<div class="white-content-web">
+						<div class="ser-logo fl">
+							<i class="fa fa-html5 fa-2x"></i>
+						</div>
+						<div class="ser-content fr">
+							<h4>前端研发</h4>
+							<!-- <p>I use a wide array of latest front technologies including JavaScript, HTML5, CSS3, etc. And known something like BackBone.js, require.js. Now I investigate the cross-browser and cross-platform web site.</p> -->
+							<ul>
+								<li><span>精通js单线程机制，任务队列以及原型机制。</span></li>
+								<li><span>熟悉http/https协议，包括其请求头域，报文格式，常用请求方式，常见状态码等。</span></li>
+							  	<li><span>精通HTML5 + CSS3制作符合W3C标准的页面，熟悉CSS盒模型，熟练使用浏览器开发者工具。</span></li>
+							  	<li><span>熟悉标签语义，了解HTML5对标签的语义强化。了解结构、样式和行为分离。</span></li>
+							  	<li><span>熟悉JavaScript的常用框架，能使用Jquery，BootStrap，Require等前端框架实现网页行为功能。</span></li>
+							  	<li><span>封装项目所用组件，封装一维码二维码页面生成脚本，lodop打印控件，定制jBox样式。</span></li>
+							  	<li><span>密切关注圈内技术走向，并对VUE十分感兴趣，在搭建自己的博客项目时，尝试使用VUE全家桶。经常尝试使用ECMA6的语法特性。印象比较深刻的是使用promise解决了同步执行回调函数的难题。</span></li>
+							  	<li><span>使用gulp + LESS进行项目通用样式风格的定制。</span></li>
+							  	<li><span>做过页面代码优化，用过webpack和YUI等工具进行代码的压缩，编码风格严格遵循JSLint。</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="grey-content-back">
+						<div class="ser-logo fr">
+							<i class="fa fa-gears fa-2x"></i>
+						</div>
+						<div class="ser-content fl">
+							<h4>后端研发</h4>
+							<!-- <p>I know well about node.js and its frame Express. Used to build End server by Express. There is producing a MVC thought in my mind. I am also good at Linux command line and bash shell. </p> -->
+							<ul>
+								<li><span>有过Node.js服务器端开发经验，熟练使用Express开发框架。对MVC设计模式有一定了解，邮政项目正是使用的SpringMVC+阿里云分布式应用服务EDAS。</span></li>
+								<li><span>目前只要是领导给的发挥空间比较大的条件下我都会选择使用node.js+vue去实现需求。</span></li>
+								<li><span>督促自己阅读英文版的npm模块使用文档。</span></li>
+								<li><span>可灵活运用npm提供的API。</span></li>
+								<li><span>使用过postgresql、redis和阿里的drds数据库。</span></li>
+								<li><span>能够熟练处理json结构数据。</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="white-content-design">
+						<div class="ser-logo fl">
+							<i class="fa fa-pencil fa-2x"></i>
+						</div>
+						<div class="ser-content fr">
+							<h4>网页设计</h4>
+							<!-- <p>I design web page by custom request. Even optimize the exist project with or without multiple plugins or API.</p> -->
+							<ul>
+								<li><span>研究过提高网页加载速度的方案，做过代码优化，坚持JsLint代码编程风格，使用过YUI，webpac进行代码压缩，可以使用PS，Sketch、PPT做图片的简单处理。</span></li>
+							  	<li><span>对AMI的BMC web UI（Backbone.js + Require.js）有过客制化的修改。</span></li>
+							  	<li><span>项目中和IBM设计师讨论过页面布局和样式颜色的选择和搭配。</span></li>
+							  	<li><span>曾负责项目展示PPT的制作，做过复杂流程抽象成动画的设计。</span></li>
+							  	<li><span>前页选项卡中的视频展示，就是由自己制作的PPT转化而成的。</span></li>
+							  	<li><span>在自己的笔记本上安装过IOS11的虚拟机，为了一探究竟设计神器Sketch到底怎么使用，并向IBM专业设计师请教过如何制作svg格式的矢量图。</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="4" class="tabcontent">
+					<div class="content-title"><h2>CONTACT.<span>WANNA-TALK-TO-ME?</span></h2></div>
+					<div class="con-wrapper">
+						<!-- <div id="map" style="width:550px; height: 220px;"></div> -->
+						<div id="allmap" style="width:550px; height: 220px;"></div>
+						<div id="connect-tab">
+							<div class="con-frame">
+								<div class="con-name">
+									<input type="text" name="name" placeholder="NAME" id="name">
+									<span class="hidden" id='name-span'>Please fill the required field</span>
+								</div>
+								<div class="con-mail">
+									<input type="text" name="email" placeholder="EMAIL" id="email">
+									<span class="hidden">Please fill the required field</span>
+								</div>
+								<div class="con-message">
+									<textarea placeholder="MESSAGE" id="message"></textarea>
+									<span class="hidden">Please fill the required field</span>
+								</div>
+								<div class="btn-area">
+									<button type="submit" id="btn-send">Send message</button>
+									<span class="">Failed to send your e-mail. Please try it later.</span>
+								</div>
+							</div>
+							<div class="con-way">
+								<li class=""><i class="fa fa-envelope fa-lg cricle-bkg"></i><span>maxiaobo2015@163.com</span></li>
+								<li class=""><i class="fa fa-phone fa-lg cricle-bkg"></i><span>130-7209-6057</span></li>
+								<li class=""><i class="fa fa-location-arrow fa-lg cricle-bkg"></i><span>Beijing City Hufangqiao</span></li>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>	
+
+	<script type="text/javascript" src="js/tabs.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
+	<script type="text/javascript" src="js/validation.js"></script>
+	<script type="text/javascript" src="js/drawer.js"></script>
+</body>
+</html>
